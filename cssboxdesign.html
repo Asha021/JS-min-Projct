@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>go</title>
+    <style>
+       *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+       }
+       body{
+        height: 100vh;
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+       }
+       .abcd{
+        height: 100%;
+        width: 100%;
+        background-color: orange;
+        border: 1px solid black;
+        display: flex;
+        position: relative;
+        flex-wrap: wrap ;
+    }
+       .a,.b,.c,.d{
+        height: 50%;
+        width: 50%;
+        border: 25px solid blue;
+       }
+       .a{
+        border-top: transparent;
+        border-left: transparent;
+       }
+       .aa{
+        height: 87%;
+        width: 90%;
+        border: 50px solid blue;
+        border-top: transparent;
+        border-left: transparent;
+       }
+       .ab{
+        height: 80%;
+        width: 90%;
+        border: 50px solid blue;
+        border-top: transparent;
+        border-left: transparent;
+       }
+       .ac{
+        height: 65%;
+        width: 85%;
+        border: 50px solid blue;
+        border-top: transparent;
+        border-left: transparent;
+       }
+
+
+       .b{
+        border-top: transparent;
+        border-right: transparent;
+       }
+       .ba{
+        height: 40%;
+        width: 43%;
+        border: 50px solid blue;
+        border-top: transparent;
+        border-right: transparent;
+        position: absolute;
+        left: 57%;
+       }
+       .bb{
+        height: 80%;
+        width: 90%;
+        border: 50px solid blue;
+        border-top: transparent;
+        border-right: transparent;
+        position: absolute;
+        left: 10%;
+        top: 0%;
+       }
+       .bc{
+        height: 70%;
+        width: 88%;
+        border: 50px solid blue;
+        border-top: transparent;
+        border-right: transparent;
+        position: absolute;
+        left: 12%;
+       }
+
+
+       .c{
+        border-bottom: transparent;
+        border-left: transparent;
+       }
+       .ca{
+        height: 40%;
+        width: 43%;
+        border: 50px solid blue;
+        border-bottom: transparent;
+        border-left: transparent;
+        position: absolute;
+        top: 60%;
+      }
+       .cb{
+        height: 80%;
+        width: 90%;
+        border: 50px solid blue;
+        border-bottom: transparent;
+        border-left: transparent;
+        position: absolute;
+        top: 20%;
+       }
+       .cc{
+        height: 70%;
+        width: 85%;
+        border: 50px solid blue;
+        border-bottom: transparent;
+        border-left: transparent;
+        position: absolute;
+        top: 31%;
+       }
+
+       .d{
+        border-bottom: transparent;
+        border-right: transparent;
+       }
+       .da{
+        height: 40%;
+        width: 43%;
+        border: 50px solid blue;
+        border-bottom: transparent;
+        border-right: transparent;
+        position: absolute;
+        top: 60%;
+        left: 57%;
+       }
+       .db{
+        height: 80%;
+        width: 90%;
+        border: 50px solid blue;
+        border-bottom: transparent;
+        border-right: transparent;
+        position: absolute;
+        left: 10%;
+        top: 20%;
+       }
+       .dc{
+        height: 70%;
+        width: 85%;
+        border: 50px solid blue;
+        border-bottom: transparent;
+        border-right: transparent;
+        position: absolute;
+        left: 15%;
+        top: 31%;
+       }
+       /* .a::before{
+			content: '';
+			height: 11%;
+			width: 21%;
+			background-color: whitesmoke;
+			position: absolute;
+			left: 39.5%;
+			top: 0%;
+		} */
+       /* .a{
+        height: 100%;
+        width: 4%;
+        background-color: rgb(7, 7, 136);
+       }
+       .b{
+        height: 4%;
+        width: 100%;
+        background-color: rgb(7, 7, 136);
+       } */
+
+    </style>
+</head>
+<body>
+    <div class="abcd">
+       <div class="a">
+          <div class="aa">
+             <div class="ab">
+                <div class="ac"></div>
+             </div>
+          </div>
+       </div>
+
+       <div class="b">
+        <div class="ba">
+            <div class="bb">
+               <div class="bc"></div>
+            </div>
+         </div>
+       </div>
+
+       <div class="c">
+        <div class="ca">
+            <div class="cb">
+               <div class="cc"></div>
+            </div>
+         </div>
+       </div>
+
+       <div class="d">
+        <div class="da">
+            <div class="db">
+               <div class="dc"></div>
+            </div>
+         </div>
+       </div>
+    </div>
+</body>
+</html>
