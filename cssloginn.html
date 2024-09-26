@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>go</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			background: lightblue;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+		}
+		.page{
+			height: 100%;
+			width: 100%;
+		}
+		fieldset{
+			height: 95%;
+			width: 88%;
+			border: 1px solid dodgerblue;
+			transform-origin: left;
+			background-color: whitesmoke;
+                     border-bottom-right-radius: 15px;
+                     border-bottom-left-radius: 15px;
+                     align-items: center;
+                     justify-content: space-around;
+                     display: flex;
+                     flex-direction: column;
+		}
+		.w{
+                     font-size: 3.8rem;
+                     align-items: center;
+                     justify-content: center;
+                     display: flex;
+                     height: 15%;
+                     width: 100%;
+   		}
+		.p{
+                     align-items: center;
+                     display: flex;
+                     justify-content: center;
+                     height: 8%;
+		}
+		.after{
+			height: 9%;
+                     align-items: center;
+                     justify-content: center;
+                     display: flex;
+		}
+		form{
+			height: 73%;
+			width: 40%;
+			position: absolute;
+			left: 26%;
+			background: rgba(255, 255, 255, .5);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: column;
+			/*border: 4px solid green;*/
+
+		}
+		legend{
+			font-size: 2.5rem;
+			color: dodgerblue;
+		}
+		.form_a{
+			height: 32%;
+			width: 90%;
+			font-size: 1.2rem;
+			/*border: 3px solid black;*/
+			
+		}
+		.form_a > input{
+			height: 65%;
+			width: 100%;
+			border-bottom: 1px ridge dodgerblue;
+			outline: none;
+                     align-items: flex-start;
+                     justify-content: center;
+                     display: flex;
+			background-color: transparent;
+			font-size: 1rem;
+                     border-top: none;
+			border-left: none;
+			border-right: none;
+                     color: dodgerblue;
+
+		}
+		.form_a > input:hover{
+			height: 60%;
+			width: 90%;
+			border-radius: 50px;
+			box-shadow: 0px 5px 15px rgba(30, 144, 255, .5);
+			border: none;
+			text-indent: 20px;
+		}
+		.form_b{
+			height: 33%;
+			width: 90%;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: column;
+			font-size: 1.2rem;
+		}
+		.form_b > input{
+			height: 100%;
+			width: 100%;
+			border-bottom: 1px ridge dodgerblue;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: column;
+			border-top: none;
+			border-left: none;
+			border-right: none;
+			outline: none;
+			background-color: transparent;
+			font-size: 1rem;
+		}
+		.form_b > input:hover{
+			height: 60%;
+			width: 90%;
+			border-radius: 50px;
+			box-shadow: dodgerblue;
+			box-shadow: 0px 5px 15px rgba(30, 144, 255, .5);
+			border: none;
+			color: 1px solid dodgerblue;
+			text-indent: 20px;
+		}
+		.form_c{
+			height: 20%;
+			width: 100%;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+              }
+		.form_c > input{
+			height: 80%;
+			width: 90%;
+			border: none;
+			outline: none;
+			background-color: dodgerblue;
+			font-size: 2rem;
+			border-radius: 50px;
+			text-transform: uppercase;
+                     color: white;
+                     cursor: pointer;
+                     box-shadow: 0px 0px 10px rgba(255, 0, 0, .2);
+		}
+		.form_d{
+			height: 15%;
+			width: 100%;
+			color: dodgerblue;
+			font-size: 1.5rem;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+		}
+		.form_d > label{
+			cursor: pointer;
+		}
+		.form_c > input:hover{
+                     color: dodgerblue;
+                     background-color: lightgreen;
+		}
+              .fot{
+			height: 6%;
+			position: absolute;
+			top: 95%;
+			left: 40%;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+		}
+*/
+	</style>
+</head>
+<body>
+       <!-- <div class="page">
+       	<div class="w">W<sup>3</sup>Edu</div>
+       	<h2 class="p">Please Login</h2>
+       	<div class="after">After Upload profiles & Reels of Short Videos</div> -->
+       	<form>
+       		<fieldset>
+       			<legend>Login Form</legend>
+       			<div class="form_a">
+       				<label for="e"><strong>E-mail.</strong><i style="color:red;">*</i></label>
+       				<input type="email" id="e" placeholder="Enter Your Email Address.">
+       			</div>
+       			<div class="form_b">
+       				<label for="p"><strong>Password.</strong><i style="color:red;">*</i></label>
+       				<input type="password" id="p" placeholder="Enter Your Password.">
+       			</div>
+       			<div class="form_c">
+       				<input type="button" value="Login">
+       			</div>
+       			<div class="form_d">
+       				<label for="l">Forget Your Password</label>
+       			</div>
+       		</fieldset>
+       	</form> 
+       	<div class="fot">Copyrights 2019 - 2023 All Rights Reserved</div>
+       </div>
+</body>
+</html>
