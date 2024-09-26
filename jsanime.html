@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>go</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            
+        }
+        main{
+            height: 50%;
+            width: 100%;
+            align-items: center;
+            justify-content: space-around;
+            display: flex;
+            background: linear-gradient(red,green,orange,yellow,blueviolet);
+        }
+        /* .anime{
+            position: absolute;
+            animation: want 1s linear infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes want {
+
+           0%{ 
+            background-color: aqua; 
+           }
+           100%{
+            background-color: brown; 
+                
+           }
+        } */
+        main:hover{
+            animation: abc 1s linear infinite;
+
+        }
+        @keyframes abc{
+			from{
+				background: linear-gradient(green, blueviolet, blue, brown, black);
+			}
+			to{
+				background: yellow,pink,orange,red,black;
+			}
+        }
+        div{
+            height: 70%;
+            width: 25%;
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+            border: 1px solid black;
+            font-size: 3rem;
+            background-color: gray;
+        }
+        section{
+            height: 10%;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+        }
+        section > button{
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+            height: 50%;
+            width: 20%;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 15px;
+            font-family: Impact;
+            font-size: 1rem;
+            background-color: aqua;
+        }
+        h1{
+            height: 30%;
+            width: 25%;
+        }
+        .a5{
+            height: 50%;
+            width: 15%;
+            font-family: Impact;
+            background-color: aqua;
+        }   
+    </style>
+
+</head>
+<body id="c">
+    <main class="a1" id="pa">
+        <div id="c2"><h3 id="pa">First</h3></div>
+        <div id="c3"><h3 id="pb">Second</h3></div>
+        <div id="c4"><h3 id="pc">Third</h3></div>
+    </main>
+    <section>
+        <button class="a2" onmouseenter="b2()" id="ab">onmouseenter</button>
+
+        <button class="a3" onmouseup="b3()" id="ac">onmouseup</button>
+        <button class="a4" onmouseleave="b4()" id="ad">onmouseleave</button>
+    </section>
+    <center><h1 id="parq">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi duc
+        imus incidunt deleniti.
+    </h1></center>
+    <section class="two">
+        <button class="a5" onclick="b()" id="parq"><h4 id="aa">Dark Mode</h4></button>
+    </section>
+
+    <script>
+        function b(){
+       if (document.getElementById('c').style.backgroundColor=='black'){
+           document.getElementById('c').style.backgroundColor='white';
+           document.getElementById('parq').style.color='black';
+           document.getElementById('aa').style.color='black';
+           document.getElementById('ab').style.color='black';
+           document.getElementById('ac').style.color='black';
+           document.getElementById('ad').style.color='black';
+           document.getElementById('aa').innerHTML='Dark Mode';
+
+
+       }else{
+           document.getElementById('c').style.backgroundColor='black';
+           document.getElementById('parq').style.color='white';
+           document.getElementById('aa').style.color='white';
+           document.getElementById('ab').style.color='white';
+           document.getElementById('ac').style.color='white';
+           document.getElementById('ad').style.color='white';
+           document.getElementById('aa').innerHTML='Light Mode';
+
+
+       }
+    }
+
+    function b2(){
+        if(document.getElementById('c2').style.backgroundColor=='green') {
+           document.getElementById('c2').style.backgroundColor='yellow';
+           document.getElementById('pa').style.color='black';
+        }else {
+            document.getElementById('c2').style.backgroundColor='green'
+            document.getElementById('pa').style.color='white'; 
+        }
+    }
+    function b3(){
+        if(document.getElementById('c3').style.backgroundColor=='green') {
+           document.getElementById('c3').style.backgroundColor='yellow';
+           document.getElementById('pb').style.color='black';
+        }else {
+            document.getElementById('c3').style.backgroundColor='green'
+            document.getElementById('pb').style.color='white';  
+        }
+    }
+    function b4(){
+        if(document.getElementById('c4').style.backgroundColor=='green') {
+           document.getElementById('c4').style.backgroundColor='yellow';
+           document.getElementById('pc').style.color='black';
+        }else {
+            document.getElementById('c4').style.backgroundColor='green' 
+            document.getElementById('pc').style.color='white'; 
+        }
+    }
+   
+  
+    </script>
+</body>
+
+</html>
