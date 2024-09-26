@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go</title>
+</head>
+<body>
+    
+
+    <script>
+        // switch(){}
+        // for(){}, while(){}, do{}while();
+
+        // # Table
+
+        // var num = prompt('Enter your num');
+        // for(var i=1; i<=10; i++){
+        //     asha=num*i;
+        //     document.write(num + 'x' + i + "=" + asha + '<br>');
+        //     if( 1 < 10) {
+        //         document.write(num + 'x' + i + "=" + asha + '<br>')
+        //     }
+        //     else(){
+                
+        //     }
+        // } 
+         
+        // var num = prompt('Enter your num');
+        // for(var i=1; i<=10; i++){
+        //     asha=num*i;
+        //     document.write(num + 'x' + i + "=" + asha +' <br>');
+            
+        // }  
+        // var num = prompt('Enter your num');
+        // for(var i=1; i<=10; i++){
+        //     asha=num*i;
+        //     document.write(num + 'x' + i + "=" + asha +' <br>');
+        // }  
+         
+        // # prime no
+        // var a = prompt('Enter your num');
+        // if (a == 2) {
+        //     alert(a+ " is a prime no")
+        //     if (a == 9){
+        //       alert(a+ "it is not a prime no")  
+        //     }
+        // } 
+        // else if(a % 2==0 || ((a==0) && (a==1))){
+        //     alert(a+ " is not a prime no")
+        // }
+        // else{
+        //     alert(a+ " is a prime no")
+        // }
+
+        // # without input table
+        // var a = prompt('sign');
+        // switch (a) {
+        //     case 'h':{
+        //        var n1 = parseInt(prompt('enter 1st no'));
+        //        var n2 = parseInt(prompt('enter 2st no'));
+        //        alert(n1+n2);
+        //     }
+        //       break;
+          
+        //     case 'k':{
+        //        var n3 = parseInt(prompt('enter 1st no'));
+        //        var n4 = parseInt(prompt('enter 2st no'));
+        //        alert(n3-n4);
+        //     }
+        //       break;
+          
+        //     case '*':{
+        //        var n5 =parseInt(prompt('enter 1st no'));
+        //        var n6 = parseInt(prompt('enter 2st no'));
+        //        alert(n5*n6);
+        //     }
+        //       break;
+          
+        //     case '/':{
+        //        var n7 = parseInt(prompt('enter 1st no'));
+        //        var n8 = parseInt(prompt('enter 2st no'));
+        //        alert(n7/n8);
+        //     }
+        //       break;
+          
+        //     case '%':{
+        //        var n9 = parseInt(prompt('enter 1st no'));
+        //        var n10 = parseInt(prompt('enter 2st no'));
+        //        alert(n9%n10);
+        //     }
+        //       break;
+          
+        //     default: alert('error')
+        //         break;
+        // }
+
+        // # sec min hr
+
+        // var sec = prompt('enter sec');
+        // var min = parseInt((sec/3600));
+        // var hr = parseInt(((sec%3600)/60));
+        // var remsec = parseInt(sec%3600);
+ 
+        // alert(hr + " : " + min + " : " + remsec + " : ")
+
+         // # moth
+
+        var day = prompt('enter day');
+        var year = parseInt((day/365));
+        var month = parseInt(((day%365)/365));
+        var remdays = parseInt(day%365);
+ 
+        alert(year + " : " + month + " : " + remdays + " : ");
+
+        // # square
+
+        // var square = prompt('enter square');
+        // var area = parseInt((square*square));
+
+        // alert(area);
+
+        //  # radius
+
+        // var radius = prompt('enter radius');
+        // var area = parseInt(Math.PI*(radius**2));
+        // alert(area);
+
+        // # TRIANGLE
+
+        // var a = parseInt(prompt("enter side a")); 
+        // var b = parseInt(prompt("enter side b"));
+        // var c = parseInt(prompt("enter side c"));
+        // var hTri = (a+b+c) / 2;
+
+        // var aTri = Math.sqrt(hTri*((htri - a) * (hTri - b) * (hTri - c)));
+        
+        // alert(aTri);
+
+        // # multiple table
+
+        var num = prompt('enter no');
+        for (var a = 1; a <= 10; a++){
+           for (var b = num; b <= num; b++) {
+              if (b >= num) {
+                document.write("["+a*b+"]<br>");
+              }
+              else{
+                document.write("["+a*b+"]");
+              }
+            
+           }
+            
+        }
+
+        
+    </script>
+</body>
+</html>
