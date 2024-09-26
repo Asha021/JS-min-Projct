@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go</title>
+    <!-- <style>
+       *{
+          margin: 0px;
+          padding: 0px;
+          box-sizing: border-box;
+       }
+       body{
+          height: 100vh;
+          padding: 100px;
+          display: flex;
+          flex-wrap: wrap;
+          /* flex-direction: column; */
+       }
+       div{
+        height: 10%;
+        width: 5.1%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border:2px solid black;
+       }
+    </style> -->
+</head>
+<body>
+    
+    <!-- <h1><center>Table</center></h1> -->
+    <script>
+        // logic opr:- &&, ||, !;
+        // (condition)?'true':'false'; (single statement)
+
+        // var a = 38;
+        // var b = 75;
+
+        // var c = ((((((!a) == (!b)) || (a !== b)) && ((a === (!b)) || (a >= b))) || ((a !== b) && ((!a) <= b))) || (a >= b)) ? 'Raj Sagar' : 'Deepak Radhay';
+        // alert(c);
+
+        // # table
+
+        // var num = prompt('enter no');
+        // for (var i = 1; i <= 10; i++) {
+        //    for (var j = 2; j <= num; j++) {
+        //        document.write("<div>" + i*j+"</div>");
+        //    }
+           
+        // }
+
+        //  # counting
+
+        // var num = prompt('enter no');
+        // for (var i = 1; i <= 200; i++) {
+        //     document.write("<div>" + i+"</div>");
+        // }
+        
+        // # prime no
+
+        // var num = parseInt(prompt('enter no'));
+        // var prime = 0;
+
+        // for(var i= 2; i<=num/2; i++ ){
+        //    if(num % i == 0){
+        //       prime=1;
+        //       break;
+        //    }
+        // }
+        
+        
+        // if(num > 2){
+        //     if(prime == 0){
+        //    alert('prime no'+num);
+        // } else{
+        //     alert('not a prime no'+num);
+        // }
+        // }
+        // else{
+        //     alert('error');
+        // }
+
+        // # full prime no
+
+        for(var i=2; i<=100; i++){
+           var prime = 0;
+           for(var j = 2; j <=i/2; j++){
+             if(i % j==0 ){
+               prime = 1;
+               break;
+             }
+           }
+        
+           if(prime == 0){
+             document.write(i + 'prime num <br>');
+           } else{
+            document.write(i + ' not prime num <br>');
+           }
+        }
+    //    
+        //  else{
+        //     document.write('not a prime no'+num);
+        // }
+        // }
+        // else{
+        //     document.write('error');
+        // }
+        
+    
+
+    </script>
+</body>
+</html>
