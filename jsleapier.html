@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>go</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-color: blueviolet;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        div{
+            height: 50%;
+            width: 30%;
+            background-color: antiquewhite;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        fieldset{
+            height: 90%;
+            width: 80%;
+            background-color: gold;
+            align-items: center;
+            justify-content: space-around;
+            display: flex;
+            flex-direction: column;
+        }
+        #s{
+            height: 20px;
+            width: 150px; 
+        }
+        #b{
+            height: 30px;
+            width: 80px;
+        }
+
+        .ad{
+            height: 20%;
+            width: 55%;
+            border: 1px solid black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+         <div  class="a">
+            <fieldset>
+                <input type="text" id="s" placeholder="Search Here..">
+                <button onclick="ab()" id="bb">submit</button>
+                <div class="ad" id="aa"></div>
+           </fieldset>
+        </div>
+   <script>
+        var a = document.getElementById('s')
+        var b = document.getElementById('aa')
+        function ab(){
+           if(a.value > 1582){
+              if ((a.value % 4 == 0 && a.value % 100!=0)|| (a.value % 400 == 0)) {
+                  b.innerHTML=a.value+" is a leap year"
+
+              }
+              else{
+                  b.innerHTML=a.value+" is not a leap year"
+                   
+              }
+           }else{
+            b.innerHTML="year should be greater than 1582"
+                 
+           }
+       }
+       
+   </script>
+</body>
+</html>
