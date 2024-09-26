@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>go</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+		}
+	  	details{
+        		height: 15%;
+        		width: 70%;
+        		display: flex;
+        		justify-content: space-around;
+        		align-items: center;
+        		/* visibility: visible; */
+        		flex-direction: column;
+        		position: absolute;
+        		top: 55%;
+        		left: 30%; 
+        		visibility: hidden;       
+   	}
+		.head{
+			position: absolute;
+			height: 15%;
+			width: 100%;
+			background: rgb(12, 60, 96);
+		}
+		.head1{
+			position: absolute;
+			font-size: 1.5rem;
+			top: 30%;
+			left: 5%;
+			color: white;
+			text-decoration: none;
+		}
+		.head2{
+			position: absolute;
+			font-size: 1rem;
+			top: 32%;
+			left: 35%;
+			color: white;
+			text-decoration: none;
+		}
+
+		.head3{
+			position: absolute;
+			font-size: 1rem;
+			top: 32%;
+			left: 45%;
+			color: white;
+			text-decoration: none;
+		}
+
+		.head4{
+			position: absolute;
+			font-size: 1rem;
+			top: 32%;
+			left: 55%;
+			color: white;
+			text-decoration: none;
+		}
+
+		.head5{
+			position: absolute;
+			font-size: 1rem;
+			top: 32%;
+			left: 65%;
+			color: white;
+			text-decoration: none;
+		}
+
+		.head6{
+			position: absolute;
+			font-size: 1rem;
+			top: 32%;
+			left: 75%;
+			color: white;
+			text-decoration: none;
+		}
+		.head7{
+			position: absolute;
+			font-size: 1rem;
+			top: 32%;
+			left: 85%;
+			color: white;
+			text-decoration: none;
+		}
+		.fa-user{
+			height: 20%;
+			width: 3%;
+			background-color: white;
+			position: absolute;
+			top: 30%;
+			left: 91%;
+			color: rgb(12, 60, 96);
+            text-decoration: none;
+			padding: 15px;
+			border-radius: 50%;
+			border: thick;
+			border-color: 1px solid white;
+
+		}
+		.log{
+			position: absolute;
+			font-size: 1rem;
+			top: 32%;
+			left: 95%;
+			color: white;
+			text-decoration: none;
+		}
+		.main{
+			position: absolute;
+			top: 15%;
+			height: 90%;
+			width: 100%;
+			background: rgb(174, 255, 243);
+		}
+		.main2{
+			position: absolute;
+			height: 50%;
+			width: 60%;
+			top: 55%;
+			left: 20%;
+			background-color: white;
+			
+		}
+		.d{
+			position: absolute;
+			font-size: 1.4rem;
+			color: black;
+			top: 15%;
+			left: 25%;
+			align-content: center;
+			display: flex;
+     }
+		.d1{
+			position: absolute;
+			font-size: 4rem;
+			color: black;
+			top: 30%;
+			left: 12%;
+			text: rgb(12, 60, 96);
+		}
+		.d2{
+			height: 15%;
+			width: 25%;
+			size: 10px;
+			border-color: 1PX Solid black;
+			position: absolute;
+			/*font-size: 1rem;*/
+			color: black;
+			top: 62%;
+			left: 38%;
+			text-decoration: none;
+			
+
+		}
+		.d2:hover{
+			color: white;
+			background: rgb(12, 60, 96);
+		}
+		.main3{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 100%;
+			background-color: white;
+			align-ITEMS: center;
+			display: flex;
+			justify-content: space-around;
+
+		}
+		.ser1, .ser2, .ser3{
+			height: 50%;
+			width: 30%;
+			align-ITEMS: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			top: 4%;
+			padding: 15px;
+			line-height: 1.6em;
+			outline-width: thick;
+		}
+		.but1{
+			height: 6%;
+			width: 10%;
+			size: 10px;
+			border-color: 1PX Solid black;
+			position: absolute;
+			color: black;
+			top: 73%;
+			left: 10%;
+			text-decoration: none;
+		}
+		.but2{
+			height: 6%;
+			width: 10%;
+			size: 10px;
+			border-color: 1PX Solid black;
+			position: absolute;
+			color: black;
+			top: 73%;
+			left: 45%;
+			text-decoration: none;
+		}
+		.but3{
+			height: 6%;
+			width: 10%;
+			size: 10px;
+			border-color: 1PX Solid black;
+			position: absolute;
+			color: black;
+			top: 73%;
+			left: 78%;
+			text-decoration: none;
+		}
+		.but1:hover, .but2:hover, .but3:hover{
+			background: rgb(12, 60, 96);
+			color: white;
+		}
+		.main3 > .ser1 > button, .ser2 > button, .ser3 > button{
+			visibility: hidden;
+		}
+		.main4{
+			position: absolute;
+			height: 90%;
+			width: 100%;
+			font-family: cursive; 
+			top: 200%;
+			background-image:url("https://img.freepik.com/free-photo/beautiful-sunset-mountains-landscape-with-sun-light-shining-through-orange-clouds-fog_146671-18476.jpg");
+			background-size: 100% 100%;
+			text-transform: uppercase;
+
+		}
+		.sh{
+			height: 100%;
+			width: 100%;
+			background-color: #F5F5DCCC;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: column;
+		}
+
+		.sh > p{
+			width: 60%;
+			text-align: center;
+			line-height: 1.8;
+		}
+		.but6{
+			height: 8%;
+			width: 12%;
+			color: black;
+			text-decoration: none;
+		}
+		.but6:hover{
+			background-color: rgb(12, 60, 96);
+			color: white;
+		}
+		.main6{
+			height: 80%;
+			width: 100%;
+			top: 290%;
+			color: 1px solid black;
+			position: absolute;
+			background-color: white;
+			font-size: 2rem;
+			font-weight: lighter;
+			justify-content: space-around;
+			text-transform: uppercase;
+			font-family: sans-serif;
+		}
+		.cl{
+			top: 296%;
+			width: 100%;
+			height: 80%;
+			background-color: white;
+			align-items: center;
+			justify-content: space-evenly;
+			display: flex;
+			text-transform: uppercase;
+		}
+		.fa-facebook{
+			height: 30%;
+			width: 20%;
+			color: grey;
+			font-size: 7rem;
+        }
+		.fa-twitter{
+			height: 30%;
+			width: 20%;
+			color: grey;
+			font-size: 7rem;
+        }
+		.fa-instagram{
+			height: 30%;
+			width: 20%;
+			color: grey;
+			font-size: 7rem;
+        }
+		.fa-whatsapp{
+			color: grey;
+			font-size: 7rem;
+        }
+		.main7{
+			height: 80%;
+			width: 100%;
+			top: 367%;
+			position: absolute;
+			background-color: whitesmoke;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: column;
+		}
+		.main7 > h3{
+			font-size: 2.5rem;
+		}
+		.tr{
+			height: 60%;
+			width: 80%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+		.data{
+			height: 70%;
+			width: 80%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: column;
+		}
+		.data > h4{
+			position: relative;
+			top: 40px;
+			color: rgb(12, 60, 96);
+        }
+		.data > p{
+			width: 50%;
+		}
+
+		.tr > p{
+            font-size: 2rem;
+			font-weight: bold;
+		}
+		.circle{
+			height: 8%;
+			width: 5%;
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			
+		}
+		.circle > a {
+			height: 50%;
+			width: 25%;
+			border-radius: 50%;
+			background-color: black;
+		}
+		.circle > a:nth-child(1){
+			border: 4px solid black;
+			background-color: white;
+		}
+		.circle > a:nth-child(2){
+			border: 4px solid black;
+			background-color: white;
+		}
+		.circle > a:nth-child(3){
+			border: 4px solid black;
+			background-color: white;
+		}
+		.circle > a:hover{
+			background-color: rgb(12, 60, 96);
+		}
+		.aside1{
+			height: 85%;
+			width: 100%;
+			background-color: rgb(12, 60, 96);
+			color: black;
+			text-transform: uppercase;
+			top: 447%;
+			position: absolute;
+			flex-direction: row;
+			font-size: 1.5rem;
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: column;
+		}
+		.aside1 > form {
+			height: 60%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: column;
+        }
+		.aside1 > form > .top{
+			height: 20%;
+			width: 80%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+		.aside1 > form > .top > .first, .aside1 > form > .top > .last{
+			height: 100%;
+			width: 75%;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-around;
+			flex-direction: column;
+		}
+
+		.aside1 > form > .top > .first > input, .aside1 > form > .top > .last > input{
+			height: 70%;
+			width: 80%;
+			border: none;
+			outline: none;
+			font-size: 2rem;
+			border-bottom: 5px solid white;
+			background-color: transparent;
+		}
+		.aside1 > form .mid{
+			height: 20%;
+			width: 80%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+		.aside1 > form > .mid > .sec, .aside1 > form > .mid > .sub{
+			height: 100%;
+			width: 75%;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-around;
+			flex-direction: column;
+		}
+		.aside1 > form > .mid > .sec > input, .aside1 > form > .mid > .sub > input{
+			height: 70%;
+			width: 80%;
+			border: none;
+			outline: none;
+			font-size: 2rem;
+			border-bottom: 5px solid white;
+			background-color: transparent;
+		}
+		.aside1 > form > .bot{
+              height: 20%;
+              width: 80%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+		}
+		.aside1 > form .bot > .msg{
+             height: 100%;
+             width: 100%;
+             display: flex;
+			align-items: flex-start;
+			justify-content: space-around;
+			flex-direction: column;
+        }
+        .aside1 > form .bot > .msg > input{
+            height: 70%;
+            width: 75%;
+            border: none;
+            background-color: transparent;
+            border-bottom: 5px solid white;
+            font-size: 1.8rem;
+            outline: none;
+
+        }
+        .aside1 > form > .bot > .but > input{
+             height: 13%;
+            width: 11%;
+            position: absolute;
+            left: 71%;
+            font-size: 2rem;
+            background-color: white;
+            border: 1px solid white;
+            color: rgb(12, 60, 96);
+            padding: 20px;
+        }
+         .aside1 > form > .bot > .but > input:hover{
+         	background-color: rgb(12, 60, 96);
+         	color: white;
+         	
+         }
+         .map{
+           height: 60%;
+           width: 100%;
+           background-color: rgb(12, 60, 96);
+            top: 532%;
+            position: absolute;
+            align-items: center;
+         	justify-content: center;
+         	display: flex;
+         }
+         .map > .img3{
+         	height: 74%;
+         	width: 65%;
+         	background-color: white;
+         	position: absolute;
+         	background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSOE6hzieR4A-DPUkCBrNas64AOjCJEV2e14RGbpi-S6HAVEzsX");
+         }
+         .footer{
+         	height: 60%;
+         	width: 100%;
+         	position: absolute;
+         	top: 592%;
+         	background-color:rgb(45, 55, 90);
+            align-items: center;
+         	justify-content: space-around;
+         	display: flex;
+         	line-height: 3rem;
+         	color: white;
+         	text-transform: uppercase;
+         }
+          .fot1 >.f2, .f3, .f4, .f5{
+         	height: 50%;
+         	width: 100%;
+         	text-decoration: none;
+            align-items: center;
+         	justify-content: space-around;
+         	display: flex;
+         	position: relative;
+         	font-size: 1.2rem;
+         	color: white;
+         	text-decoration: none;
+         }
+          .f1{
+         	font-size: 2rem;
+         	line-height: 6rem;
+         }
+         .fot1{
+         	text-decoration: none;
+
+         }
+          .fot2 > .fh, .f21, .f22, .f23, .f24, .f25, .f26{
+         	height: 50%;
+         	width: 100%;
+         	text-decoration: none;
+            align-items: center;
+         	justify-content: space-around;
+         	display: flex;
+         	position: relative;
+         	font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+         }
+          .fot2 > .fh{
+         	font-size: 2rem;
+         	line-height: 6rem;
+         }
+         .fot2{
+         	text-decoration: none;
+         }
+          .fot3 >.f31, .f34, .f35{
+         	height: 50%;
+         	width: 100%;
+         	text-decoration: none;
+            align-items: center;
+         	justify-content: space-evenly;
+         	display: flex;
+         	position: relative;
+         	font-size: 1.2rem;
+         	color: white;
+            text-decoration: none;
+         }
+         .fot3 > .fa-facebook{
+			color: white;
+			align-items: center;
+			justify-content: space-evenly;
+			display: inline-flex;
+			font-size: 1.4rem;
+        }
+        .fot3 > .fa-twitter{
+			font-size: 1.4rem;
+			color: white;
+			align-items: center;
+			justify-content: space-evenly;
+			display: inline-flex;
+			flex-direction: row;
+        }
+        .fot3 >.f31{
+         	font-size: 2rem;
+         	line-height: 6rem;
+         }
+         .fot3{
+         	text-decoration: none;
+         }
+        @media only screen and (min-width: 325px) and (max-width: 576px){
+        	body{
+        		height: 100vh;
+        	}
+        	details{
+        		height: 100%;
+        		width: 100%;
+        		visibility: visible;
+        		position: absolute;
+        		top: 0%;
+        		left: 0%;
+        	}
+        	
+          /* details[open] > .nav-a{
+        		height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, .8);
+        		position: absolute;
+        		top: 15%;
+        		z-index: 9;
+        		display: flex;
+        		flex-direction: column;
+        		font-size: 1.6rem;
+          }
+        	details[open] > .nav-a > a{
+        			text-decoration: none;
+        			color: white;
+        	}
+        	summary{
+        		list-style-type: '---------';
+        		color: white;
+        		position: relative;
+        		top: 6%;
+        		left: 90%;
+        	}
+
+        	summary::before,summary::after{
+        		content: '';
+        		height: .5%;
+        		width: 8%;
+        		position: absolute;
+        		border: 1px dashed white;
+        		transform-origin: left;
+        		transform: rotateY(180deg);
+
+        	}
+        	summary::after{
+        		top: 110%;
+        	}
+        	details[open] > summary::after{
+        		transform: rotate(-150deg);
+        	}
+        	details[open] > summary::before{
+        		transform: rotate(147deg);
+        	}
+        	details[open] > summary{
+        		color: transparent;
+        	}
+        	 */
+        	.head{
+        		height: 100%;
+        		display: flex;
+        		align-items: center;
+        		justify-content: center;
+        		display: flex;
+        	}
+			.fa-bars{
+				top: 5%;
+				left: 92%;
+				font-size: 1.5rem;
+				color: white;
+				position: absolute;
+				display: block;
+			}
+			/* .fa{
+            display: block;
+            left: 90%;
+            top: 7.5%;
+            position: absolute;
+            font-size: 2rem;
+            color: yellow;
+        } */
+        	/* .nav-a{
+        		height: 100%;
+        		width: 100%;
+        		display: flex;
+        		align-items: center;
+        		justify-content: space-around;
+
+        	}
+        	.nav-a > details > a{
+        		color: white;
+        		font-size: 24px;
+        		text-decoration: none;
+        	}
+         */
+         /* .details > summary{
+        	 	content: "";
+        		height: 100%;
+        		width: 100%;
+        		color: green;
+        		position: absolute;
+        		flex-direction: column;
+        		transform-origin: left;
+        		list-style-type: -----;
+        	} */
+        .head > .head1{
+			      position: absolute;
+			      font-size: 1.5rem;
+			      top: 5%;
+			      left: 5.5%;
+			      color: white;
+			      text-decoration: none;
+		}
+        	.main2{
+        		height: 40%;
+        		width: 80%;
+        		top: 60%;
+        		left: 15%;
+        	}
+        	.main2 > .d, .d1, .d2{
+        		height: 40%;
+        		width: 100%;
+        		font-size: 1rem;
+        		position: absolute;
+        		left: 12%;
+        		font-style: oblique;
+        		line-height: 20px;
+        	}
+        	.main2 > .d{
+        		width: 90%;
+        		left: 14%;
+        	}
+        	.d1{
+        		left: 30%;
+        		line-height: 55px;
+        		text-decoration-style: double;
+        	}
+        	.d2{
+        		height: 13%;
+        		width: 33%;
+        		font-size: 10px;
+        		left: 35%;
+        		top: 69%;
+        	}
+        	  .ser1 > button:hover, .ser2 > button:hover, .ser3 > button:hover{
+        		background-color: rgb(12, 60, 96);
+        		color: white;
+        	}
+        	.main3{
+        		flex-direction: column;
+        		height: 180%;
+        		background-color: white;
+        		top: 100%;
+        	}
+        	.main3 > .ser1, .ser2, .ser3{
+        		height: 100%;
+        		width: 80%;
+        		font-size: 1rem;
+        		top: 60%;
+
+            }
+            .main3 > .ser1 > button, .ser2 > button, .ser3 > button{
+        		height: 13%;
+        		width: 20%;
+        		font-size: 0.8rem;
+        		top: 50%;
+            visibility: visible;
+            }
+            .but1, .but2, .but3{
+            	visibility: hidden;
+            }
+            .main3 > .ser1 > .button{
+            	height: 20%;
+            	width: 100%;
+            	size: 10px;
+            	background-color: black;
+            }
+        
+            .main4{
+			         position: absolute;
+		         	height: 110%;
+			        width: 100%;
+		         	font-family: cursive; 
+			        top: 280%;
+			        background-image:url("https://img.freepik.com/free-photo/beautiful-sunset-mountains-landscape-with-sun-light-shining-through-orange-clouds-fog_146671-18476.jpg" height:200%;);
+		         	background-size: 200% 100%;
+			        text-transform: uppercase;
+
+		  }
+		  .main4 > h1{
+		  	font-size: 0.5rem;
+		  }
+		  .sh > p {
+           width: 80%;
+           font-size: 0.9rem;
+		  }
+		  .but6{
+		  	width: 20%;
+		  }
+		  .main6{
+		  	height: 110%;
+		  	top: 390%;
+		  	width: 100%;
+		  	font-size: 1.1rem;
+		  	/*background: transparent;*/
+		  
+		  }
+
+		  .main6 > h1{
+		  	height: 20%;
+		  	align-items: center;
+		  	justify-content: center;
+		  	display: flex;
+		  }
+		  .cl{
+		  	flex-direction: column;
+		  	line-height: 10px;
+		  	justify-content: center;
+		  	align-items: center;
+		  	display: flex;
+		  	height: 70%;
+		
+		  }
+		  .cl > .fa-twitter, .fa-facebook, .fa-whatsapp, .fa-instagram{
+		  	font-size: 5rem;
+}
+		  .main7{
+		  	height: 50%;
+		  	width: 100%;
+		  	top: 500%;
+		  }
+		  .main7 > h3{
+		  	font-size: 1.6rem;
+		  	height: 10%;
+	
+		  }
+		  .data{
+		  	height: 97%;
+		  
+		  }
+		  .data > p{
+		  	width: 90%;
+		  	height: 65%;
+		  
+		  }
+		  .data . h5{
+		  	position: absolute;
+		  	top: 40%;
+		  	line-height: 1.5px;
+		  }
+      .main7 > .circle{
+       	width: 8%;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+           	
+     }
+     .aside1{
+     	flex-direction: column;
+     	top: 550%;
+     	height: 140%;
+           }
+    .aside1 > form > .top > .first > input, .aside1 > form > .top > .last > input{
+			height: 30%;
+			width: 100%;
+		}
+		.aside1 > form > .top{
+			height: 50%;
+			width: 100%;
+			flex-direction: column;
+		}
+		.aside1 > form > .mid{
+			height: 50%;
+			width: 100%;
+			flex-direction: column;
+		}
+		.aside1 > form > .bot{
+			height: 50%;
+			width: 100%;
+			flex-direction: column;
+		}
+		.aside1 > form > .mid > .sec > input, .aside1 > form > .mid > .sub > input{
+			height: 30%;
+			width: 100%;
+		}
+		.aside1 > form > .bot{
+			width: 75%;
+		}
+		.aside1 > form > .bot > .msg > input{
+			height: 30%;
+			width: 100%;
+            transform-origin: center;
+	    }
+	   	  .aside1 > form > .bot > .but > input{
+			height: 8%;
+			width: 75%;
+	        align-items: center;
+	        justify-content: center;
+	        display: flex;
+	        flex-direction: column;
+	        left: 13%;
+	        position: absolute;
+	    }
+	    .bot{
+	    	height: 60%;
+	    	align-items: center;
+	    	justify-content: center;
+	    	display: flex;
+	    }
+	    .map{
+	    	top: 690%;
+	    	height: 50%;
+	    }
+	    .footer{
+	    	top: 740%;
+	    	height: 170%;
+	    	flex-direction: column;
+	    	justify-content: space-around;
+	    	align-items: center;
+	    	display: flex;
+	    }
+	    .fot1, .fot2, .fot3{
+	    	flex-direction: column;
+	    	justify-content: space-around;
+	    	align-items: center;
+	    	display: flex;
+	    	width: 100%;
+	     }
+	    .fot3 > .fa-twitter{
+			position: absolute;
+			left: 33%;
+			top: 70.5%;
+        }
+		.abt2{
+			height: 85%;
+			width: 100%;
+			z-index: 1;
+			/* border: 1px solid black; */
+			left: 0%;
+			top: 15%;
+			position: absolute;
+			align-items: center;
+			justify-content: space-around;
+			display: flex;
+			flex-direction: column;
+			background-color: rgba(0, 0, 0, .5);
+			/* display: block; */
+			visibility: hidden;
+		}
+		.abt2 > a{
+			text-decoration: none;
+			color:  white;
+			font-size: 2rem;
+		}
+	}
+
+   
+</style>
+
+
+</head>
+<body>
+	<header class="head">
+		<a href="#" class="head1">JAMES CONSULTING</a>
+		<a href="#" class="head2">About</a>
+		<a href="#" class="head3">Projects</a>
+		<a href="#" class="head4">Services</a>
+		<a href="#" class="head5">plan & Pricing</a>
+		<a href="#" class="head6">Tools & Tips</a>
+		<a href="#" class="head7">Contact</a>
+		<a href="#" class="fa fa-user"></a><a href="#" class="log">Log In</a>
+	</header>
+	<div class="abt2" id="vis">
+		<a href="#" >About</a>
+		<a href="#" >Projects</a>
+		<a href="#" >Services</a>
+		<a href="#" >plan & Pricing</a>
+		<a href="#" >Tools & Tips</a>
+		<a href="#" >Contact</a>
+	 </div>
+	 <div class="fa fa-bars"  id="bars" onclick="cross()"></div>
+<main class="main">
+	<img src="https://c02.purpledshub.com/uploads/sites/41/2021/08/mountains-7ddde89.jpg" height="100%" width="100%"  >
+</main>
+<main class="main2">
+
+	<samp class="d">Developing inovation stretigies</samp>	
+	<samp class="d1"><b>ACHIEVINING GROWTH</b></samp>	
+	<button class="d2">Book A Consultation</button>	
+</main>
+<main class="main3">
+	<div class="ser1">
+		<h2 size="30rem" style="color: rgb(45, 55, 90);"><b>SERVICES</b></h2>  
+		<p  style="color: grey;">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your  click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let you users know a little more about you</p>
+			<button>More Info</button>
+	</div>
+<!-- 	<button class="but1" >More Info</button> -->
+	<div class="ser2">
+		<h2 size="30rem" style="color: rgb(45, 55, 90);">PROJECTS</h2>
+          <p style="color: grey;">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and  click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let youlet your users know a little more about you</p>
+          <button>More Info</button>
+	</div>
+	<!-- <button class="but2" >More Info</button> -->
+	<div class="ser3">
+		<h2 size="30rem" style="color: rgb(45, 55, 90);">CLIENTS</h2>
+        <p  style="color: grey;">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me  click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let you to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you</p>
+        <button>More Info</button>
+	</div>
+	
+	<button class="but1" >More Info</button>
+	<button class="but2" >More Info</button>
+	<button class="but3" >More Info</button>
+
+</main>
+<main class="main4">
+	<div class="sh">
+			<h1>about</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor i<!-- ncididunt ut labore et. dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud --> exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<button class="but6">Learn More</buttons>
+		</div>
+	</main>
+	<main class="main6">
+	<h1><center>our clints</center></h1>
+	<div class="cl">
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-instagram"></i>
+		<i class="fa fa-whatsapp"></i>
+
+	</div>
+</main>
+<main class="main7">
+	<h3>TESTIMONIALS</h3>
+	<div class="tr">
+		<p><</p>
+		 <div class="data">
+			<p>“I'm a testimonial. Click to edit me and add text that says something nice about you and your services.”</p>
+			<h4>Project Manager</h4>
+			<h5>Dora Bridges</h5>
+		</div>
+		<p>></p>
+	</div>
+	<div class="circle">
+		<a href="#"></a>
+		<a href="#"></a>
+		<a href="#"></a>
+	</div>
+</main>
+<aside class="aside1">
+	<h2><center>contact</center></h2>
+	<form>
+		<div class="top">
+			<div class="first">
+				<label for="f">First name</label>
+				<input type="text" id="f">
+			</div>
+			<div class="last">
+				<label for="l">Last name</label>
+				<input type="text" id="l">
+			</div>
+		</div>
+		<div class="mid">
+			<div class="sec">
+			<label for="e">E-mail*</label>
+			<input type="text" id="e">
+			</div>
+			<div class="sub">
+			<label for="s">subjact</label>
+			<input type="text" id="s">
+		</div>
+		</div>
+		<div class="bot">
+			<div class="msg">
+				<label for="m">messages*</label>
+				<input type="text" id="m">
+			</div>
+			<div class="but">
+				<label for="submit"></label>
+				<input type="submit" id="submit">
+			</div>
+		</div>
+	</form>
+	</aside>
+	<div class="map">
+		<div class="img3"></div>
+   </div>
+   <div class="footer">
+	    <a href="#" class="fot1">
+	      	<h3 class="f1" style="color:white;">JAMES CONSULTING</h3>
+	      	<samp class="f2">Terry Francine Street</samp>
+	      	<samp class="f3">San Francisco, CA 94158</samp>
+	      	<samp class="f4">Mail: info@mysite.com</samp>
+	      	<samp class="f5">Tel: 123-456-7890</samp>
+	    </a>	
+	   <a href="#" class="fot2">
+	      <h3 class="fh">menu</h3>
+	      <samp class="f21">About</samp>
+	      <samp class="f22">Projects</samp>
+	      <samp class="f23">Services</samp>
+	      <samp class="f24">Plans & Pricing</samp>
+	   </a>	
+	   <a href="#" class="fot3">
+	      <h3 class="f31"> socials</h3>
+	      <samp class="fa fa-facebook"></samp>
+	      <samp class="fa fa-twitter"></samp>
+	      <samp class="f34">© 2035 by JAMES CONSULTING.</samp>
+	      <samp class="f35">Powered and secured by Wix</samp>
+	   </a>
+   </div>	
+
+   <script>
+	var a = document.getElementById('vis');
+	var ab = document.getElementById('bars');
+	var num = 0;
+	function cross(){
+           if (num == 0){
+			 a.style.visibility=('visible');
+			 ab.classList.remove('fa-bars');
+             ab.classList.add('fa-times');
+			 num=1;
+		   } else {
+			   a.style.visibility=('hidden');
+			   ab.classList.remove('fa-times');
+               ab.classList.add('fa-bars');
+			 num=0;
+		   }
+	}
+   </script>
+  
+</body>
+</html>
