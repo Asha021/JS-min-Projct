@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>go</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    .a {
+        height: 20%;
+        width: 100%;
+        border: 1px solid black;
+        background-color: blueviolet;
+    }
+
+    .b {
+        height: 30%;
+        width: 20%;
+    }
+
+    .box {
+        display: none;
+        height: 200px;
+        width: 100px;
+        border: 1px solid black;
+        background-color: goldenrod;
+        padding: 30px 30px;
+        text-decoration: none;
+        color: aliceblue;
+        font-size: 1.1rem;
+    }
+
+    .box2 {
+        display: none;
+        height: 150px;
+        width: 100px;
+        /* border: 1px solid black; */
+        background-color: violet;
+        padding: 30px 30px;
+        font-size: 1.1rem;
+        position: absolute;
+        top: 12%;
+        left: 7%;
+    }
+
+    .e,
+    .d {
+        text-decoration: none;
+        color: aliceblue;
+    }
+</style>
+
+<body>
+    <div class="a">
+        <button class="b" onclick="abc()">
+            <H3>Login</H3>
+        </button>
+        <div class="box" id="ab">
+            <a href="#" class="e" onclick="ab()">home</a>
+            <a href="#" class="e">menu</a>
+            <a href="#" class="d">bio</a>
+            <a href="#" class="e">menu</a>
+            <a href="#" class="e">Gallery</a>
+            <a href="#" class="e">Tool</a>
+            <a href="#" class="e">map</a>
+        </div>
+        <div class="box2" id="as">
+            <a href="C:\Users\Admin\Desktop\ASHA\clon.html" class="d">bio</a>
+            <a href="C:\Users\Admin\Desktop\ASHA\anime.html" class="d">menu</a>
+            <a href="#" class="d">Gallery</a>
+            <a href="#" class="d">Tool</a>
+            <a href="#" class="d">map</a>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function abc() {
+            if (document.getElementById('ab').style.display == 'block') {
+                document.getElementById('ab').style.display = 'none';
+
+            } else {
+                document.getElementById('ab').style.display = 'block';
+            }
+        }
+        function ab() {
+            if (document.getElementById('as').style.display == 'block') {
+                document.getElementById('as').style.display = 'none'
+            } else {
+                document.getElementById('as').style.display = 'block'
+            }
+        }
+    </script>
+</body>
+
+</html>
