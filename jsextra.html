@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        padding: 8% 0% 0% 1%;
+        background-color: black;
+        user-select: none;
+    }
+    .head{
+        height: 20%;
+        width: 20%;
+        background-color: blueviolet;
+        clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    }
+    h1{
+        font-size: 15rem;
+        background: url("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
+        background-size: 200% auto;
+        background-clip: text;
+        background-color: blue;
+        -webkit-background-clip: text; 
+         color: transparent; 
+         animation: ab 10s alternate infinite;
+    }
+    @keyframes ab{
+        from{
+            background-position: 0% 80%;
+        }
+        to{
+            background-position: 100% 50%;
+            top: 90%;
+        }
+    }
+    .slide{
+        position: absolute;
+        top: 230%;
+           height: 50%;
+           width: 560px;
+           display: flex;
+           border: 15px ridge silver;
+           border-radius: 10px;
+            overflow: auto;
+            /* position: relative; */
+    }
+    .slide> img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: sticky;
+            left: 0%;
+            flex-shrink: 0;
+    }
+    </style>
+
+<body>
+    <!-- any shape path url on clip path maker website -->
+    <div class="head"></div> 
+    <h1>AshaPal.</h1>
+    <div class="slide">
+        <img src="C:\Users\Admin\Pictures\Saved Pictures\IMG_20230211_175548_865.jpg" alt="img">
+        <img src="C:\Users\Admin\Pictures\Saved Pictures\IMG_20220505_105347_520.jpg" alt="img">
+        <img src="C:\Users\Admin\Pictures\Saved Pictures\IMG_20230211_183608_464.jpg" alt="img">
+        <img src="C:\Users\Admin\Pictures\Saved Pictures\IMG_20230211_175548_865.jpg" alt="img">
+    </div>
+</body>
+</html>
