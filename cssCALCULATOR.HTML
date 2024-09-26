@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GO</title>
+	<center><h1><strong>calculator</strong></h1></center>
+
+</head>
+<body bgcolor="PINK">
+		
+ <center><fieldset style="WIDTH: 50%; height: 1000%; "></center>
+	<dialog open>
+		<form oninput="a.value = parseFloat(x.value) +  parseFloat(y.value); b.value = parseFloat(x.value) -  parseFloat(y.value); c.value = parseFloat(x.value) *  parseFloat(y.value); d.value = parseFloat(x.value) /  parseFloat(y.value); e.value = parseFloat(x.value) %  parseFloat(y.value); f.value = parseFloat(x.value) **  parseFloat(y.value); ">
+		1<input type="range"  value="0" id="x" placeholder="enter your first digit" min="1" max="100">100			
+		  + | - | * | / | % ** &nbsp;&nbsp; &nbsp;&nbsp;
+		1<input type="range" value="0"  id="y" placeholder="enter your second digit"  min="1" max="100">100
+		= &nbsp;&nbsp; &nbsp;&nbsp;
+		
+		<output name="a" for="x,y"></output>|
+		<output name="b" for="x,y"></output>|
+		<output name="c" for="x,y"></output>|
+		<output name="d" for="x,y"></output>|
+		<output name="e" for="x,y"></output>|
+		
+   </form>
+</dialog>  
+
+   	
+	<form oninput="z.value = parseFloat(x.value) + parseFloat(y.value);">
+		<input type="text" id="x" placeholder="enter your first digit">
+		+
+		<input type="text" id="y" placeholder="enter your second digit">
+		=
+		<output name="z" for="x,y"></output>
+		
+   </form>
+   <hr>	<form oninput="z.value = parseFloat(x.value) - parseFloat(y.value);">
+		<input type="text" id="x" placeholder="enter your first digit">
+		-
+		<input type="text" id="y" placeholder="enter your second digit">
+		=
+		<output name="z" for="x,y"></output>
+		
+   </form>
+   <hr>
+   	<form oninput="z.value = parseFloat(x.value) * parseFloat(y.value);">
+		<input type="text" id="x" placeholder="enter your first digit">
+		*
+		<input type="text" id="y" placeholder="enter your second digit">
+		=
+		<output name="z" for="x,y"></output>
+		
+   </form>
+   <hr>
+   	<form oninput="z.value = parseFloat(x.value) / parseFloat(y.value);">
+		<input type="text" id="x" placeholder="enter your first digit">
+		/
+		<input type="text" id="y" placeholder="enter your second digit">
+		=
+		<output name="z" for="x,y"></output>
+		
+   </form>
+   <hr>
+   	<form oninput="z.value = parseFloat(x.value) % parseFloat(y.value);">
+		<input type="text" id="x" placeholder="enter your first digit">
+		%
+		<input type="text" id="y" placeholder="enter your second digit">
+		=
+		<output name="z" for="x,y"></output>
+	
+   </form>
+  <!--  <hr>
+   <form oninput="z.value = parseFloat(x.value) + parseFloat(y.value)">
+   	
+   	<input type="text" id="x">
+   	+
+   	<input type="text" id="y">
+   	=
+   	<output name="z" for=x,y></output>
+   </form>
+   <hr>
+   <form oninput="z.value = parseFloat(x.value) - parseFloat(y.value)">
+   	<input type="text" id="x" placeholder="search your first digit">
+   	-
+   	<input type="text" id="y">
+   	=
+   	<output name="z" for="x,y"></output>
+   	
+   </form>
+ -->
+ <hr>
+ <!-- <form oninput="a.value = parseFloat(x.value) + parseFloat(y.value); b.value = parseFloat(x.value) - parseFloat(y.value); c.value = parseFloat(x.value) \ parseFloat(y.value); d.value = parseFloat(x.value) % parseFloat(y.value); e.value = parseFloat(x.value) ** parseFloat(y.value); ">
+
+ 	<input type="text" id="x" > 
+ 	+ | - | / | % | **
+ 	<input type="text" id="y" >
+ 	 =
+ 	<output name="a" for="x,y">sum</output>|
+ 	<output name="b" for="x,y">sub</output>|
+ 	<output name="c" for="x,y">div</output>|
+ 	<output name="d" for="x,y">mul</output>|
+ 	<output name="e" for="x,y">exp</output>|
+ </form> -->
+ <form oninput="a.value = parseFloat(x.value) +  parseFloat(y.value); b.value = parseFloat(x.value) -  parseFloat(y.value); c.value = parseFloat(x.value) *  parseFloat(y.value); d.value = parseFloat(x.value) /  parseFloat(y.value); e.value = parseFloat(x.value) %  parseFloat(y.value); f.value = parseFloat(x.value) **  parseFloat(y.value); ">
+		1<input type="range"  value="0" id="x" placeholder="enter your first digit" min="1" max="100">100			
+		  + | - | * | / | % ** <!-- &nbsp;&nbsp; &nbsp;&nbsp; -->
+		1<input type="range" value="0"  id="y" placeholder="enter your second digit"  min="1" max="100">100
+		= <!-- &nbsp;&nbsp; &nbsp;&nbsp; -->
+		
+		<output name="a" for="x,y"></output>|
+		<output name="b" for="x,y"></output>|
+		<output name="c" for="x,y"></output>|
+		<output name="d" for="x,y"></output>|
+		<output name="e" for="x,y"></output>|
+		
+   </form>
+   <hr>
+   <form oninput="a.value = parseFloat(x.value) + parseFloat(y.value);b.value = parseFloat(x.value) - parseFloat(y.value);c.value = parseFloat(x.value) * parseFloat(y.value);d.value = parseFloat(x.value) / parseFloat(y.value);e.value = parseFloat(x.value) ** parseFloat(y.value);">
+   	<input type="text" id="x">
+   	+ | - | * | / | **
+   	<input type="text" id="y">
+   	=
+   	<output name="a" for="x,y">sum</output>|
+   	<output name="b" for="x,y">sub</output>|
+   	<output name="c" for="x,y">mul</output>|
+   	<output name="d" for="x,y">div</output>|
+   	<output name="e" for="x,y">exp</output>|
+   </form>
+</body>
+</html>
