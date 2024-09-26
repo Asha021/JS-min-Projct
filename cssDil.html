@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background-color: blanchedalmond;
+        }
+        .dil{
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            transform: rotate(-45deg);
+            position: relative;
+            /* transform: all ease .5; */
+            box-shadow: 0px 0px 100px red;
+            animation: dil 1s linear infinite;
+        }
+        @keyframes dil{
+            0%{
+                scale: 0.7;
+            }
+            50%{
+                scale: o.9;
+            }
+            100%{
+                scale: o.7;
+            }
+        }
+        .dil:before{
+            content: "";
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            background-color: red;
+            border-radius: 75px;
+            top: -50%;
+            box-shadow: -10px 0px 100px red;
+        }
+        .dil:after{
+            content: "";
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            background-color: red;
+            border-radius: 75px;
+            right: -50%;
+            box-shadow: 10px 0px 100px red;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div class="dil"></div>
+</body>
+</html>
