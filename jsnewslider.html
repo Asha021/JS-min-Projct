@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>go</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .main{
+            height: 80%;
+            width: 80%;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, .6);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .btn{
+            height: 10%;
+            width: 5%;
+            font-size: 3rem;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+        }
+        .img_view{
+            height: 80%;
+            width: 88%;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+        }
+        #view{
+            text-align: center;
+            border: none;
+            font-size: 3rem;
+            font-weight: bold;
+            border-radius: 15px;
+        }
+
+        img{
+            height: 90%;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 100px  rgba(255, 255, 255, .5);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="button" id="btnlt" value="<" class="btn">
+           <div class="img_view">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/nature-quotes-landscape-1648265299.jpg" alt="logo" id="img">
+                <input type="number" id="view" placeholder="*" disabled>
+           </div>
+           <input type="button" id="btnrt" value=">" class="btn">
+    </div>
+      
+    <script>
+        var image = document.getElementById('img')
+        var img_view = document.getElementById('view')
+        var arr =['https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=',
+        'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D',
+        'https://hips.hearstapps.com/hmg-prod/images/nature-quotes-landscape-1648265299.jpg',
+        'https://th.bing.com/th/id/OIG.rFZQiB1UylKPh2zrH_Pt',
+        'https://images.pexels.com/photos/757889/pexels-photo-757889.jpeg?auto=compress&cs=tinysrgb&w=600',
+        "https://hips.hearstapps.com/hmg-prod/images/nature-quotes-landscape-1648265299.jpg"];
+
+        var num = -1;
+         document.getElementById('btnrt').addEventListener('click',()=>{
+            var max = num += 1;
+        if (max > arr.length-1){
+               num=0;
+               max=0;
+           }
+           image.src=arr[max];
+           img_view.value=max;
+        })
+
+         document.getElementById('btnlt').addEventListener('click',()=>{
+            var min = num -= 1;
+           if (min < arr.length-6){
+               num=arr.length-1;
+               min=arr.length-1;
+           }
+            image.src=arr[min];
+            img_view.value=min;   
+            
+         })
+    </script>
+</body>
+</html>
