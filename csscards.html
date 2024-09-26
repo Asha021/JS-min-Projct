@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-color: rgb(12, 12, 12);
+        }
+
+        .main {
+            height: 200px;
+            width: 30%;
+            display: flex;
+            gap: 5px;
+            user-select: none;
+        }
+
+        img {
+            height: 100%;
+            width: 10%;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid white;
+            transform: all ease 1s;
+            cursor: pointer;
+        }
+
+        img:hover {
+            width: 100%;
+            box-shadow: 0px 0px 100px rgb(191, 196, 190);
+        }
+
+        .main:has(img:hover) img:not(:hover) {
+            scale: 0.8;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="https://img.freepik.com/free-vector/cute-koala-with-cub-cartoon-icon-illustration_138676-2839.jpg" alt="img">
+        <img src="C:\Users\Admin\Pictures\Saved Pictures\IMG_20230211_175548_865.jpg" alt="img">
+        <img src="C:\Users\Admin\Pictures\Saved Pictures\IMG_20220505_105347_520.jpg" alt="img">
+        <img src="C:\Users\Admin\Pictures\Saved Pictures\IMG_20230211_183608_464.jpg" alt="img">
+        <img src="C:\Users\Admin\Pictures\Saved Pictures\IMG_20220430_181141_260.jpg" alt="img">
+        <img src="C:\Users\Admin\Pictures\suraj picture\IMG_20230325_082637_310.jpg" alt="img">
+        <img src="C:\Users\Admin\Pictures\Saved Pictures\IMG_20230315_234136_435.jpg" alt="img">
+        <img src="C:\Users\Admin\Pictures\Saved Pictures\IMG_20220903_184015_124.jpg" alt="img">
+        <img src="C:\Users\Admin\Pictures\suraj picture\IMG_20230311_142330_198.jpg" alt="img">
+        <img src="C:\Users\Admin\Pictures\suraj picture\IMG_20230510_233520_520.jpg" alt="img">
+
+    </div>
+</body>
+
+</html>
