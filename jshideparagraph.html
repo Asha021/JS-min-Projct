@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>go</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-color: rgb(100, 156, 138);
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        p{
+    
+            width: 30%;
+        }
+        button{
+            height: 5%;
+            width: 10%;
+            position: absolute;
+            top: 65%;
+            left: 45%;
+        }
+    </style>
+</head>
+<body>
+    <p id="a">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi 
+        dolorum earum, hic atque ipsa eligendi vero qui similique! Vero
+         blanditiis, hic ipsam facilis consequatur facere tenetur corrupti deleniti accusamus culpa.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corporis tenetur esse eveniet, doloremque
+         odio dolores dolorum placeat, incidunt provident veritatis? Itaque eaque rat
+        ione voluptatem dolorum dolorem cupiditate sint iste.</p>
+    <button onclick="abc()"><h3 id="ab">show</h3></button>
+
+   <script>
+    //    var num = 0;
+
+    //   function abc(){
+    //     if(num==0) {
+    //         document.getElementById('a').style.visibility='hidden';
+    //         num=1;
+    //         document.getElementById('ab').innerHTML='show';
+    //     } else {
+    //         document.getElementById('a').style.visibility='visible';
+    //         num=0;
+    //         document.getElementById('ab').innerHTML='hide';
+    //     }
+
+    //   }
+
+
+        var num = true;
+
+      function abc(){
+        if(num==true ){
+            document.getElementById('a').style.visibility='hidden';
+           
+        } else{
+            document.getElementById('a').style.visibility='visible';
+        }
+        num=!num;
+
+      }
+     
+   </script> 
+</body>
+</html>
