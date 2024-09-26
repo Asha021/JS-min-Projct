@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>go</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background-color: rgb(61, 58, 58);
+        }
+
+        .aaa {
+            height: 70%;
+            width: 30%;
+            border: 1px solid white;
+            box-shadow: 0px 0px 20px rgb(196, 163, 163);
+            align-items: center;
+            justify-content: space-evenly;
+            display: flex;
+            align-items: flex-end;
+            background-color: black;
+        }
+
+        span {
+            height: 15%;
+            width: 30%;
+            top: 22%;
+            left: 35%;
+            position: absolute;
+            align-items: flex-end;
+            justify-content: space-around;
+            display: flex;
+            /* border: 1px solid green; */
+        }
+
+        @keyframes ab {
+            25% {
+                background: linear-gradient(blue, white, yellow, purple);
+                height: 90%;
+            }
+
+            50% {
+                background: linear-gradient(red, green, rgb(223, 54, 223), aqua);
+                height: 70%;
+            }
+
+            75% {
+                background: linear-gradient(blue, white, yellow, purple);
+                height: 40%;
+            }
+
+            100% {
+                background: linear-gradient(red, green, rgb(223, 54, 223), aqua);
+                height: 20%;
+            }
+        }
+
+        @keyframes abc {
+            25% {
+                background: linear-gradient(blue, white, yellow, purple);
+                height: 80%;
+            }
+
+            50% {
+                background: linear-gradient(red, green, rgb(223, 54, 223), aqua);
+                height: 60%;
+            }
+
+            75% {
+                background: linear-gradient(blue, white, yellow, purple);
+                height: 20%;
+            }
+
+            100% {
+                background: linear-gradient(red, green, rgb(223, 54, 223), aqua);
+                height: 100%;
+            }
+        }
+
+        @keyframes abcd {
+            25% {
+                background: linear-gradient(blue, white, yellow, purple);
+                height: 100%;
+            }
+
+            50% {
+                background: linear-gradient(red, green, rgb(223, 54, 223), aqua);
+                height: 80%;
+            }
+
+            75% {
+                background: linear-gradient(blue, white, yellow, purple);
+                height: 60%;
+            }
+
+            100% {
+                background: linear-gradient(red, green, rgb(223, 54, 223), aqua);
+                height: 20%;
+            }
+        }
+
+        /* .a1,.a4,.a7,.a10,.a13{
+            animation: ab 1s linear infinite;
+        }   
+        .a2,.a5,.a8,.a11,.a14{
+            animation: abc 1s linear infinite;
+        }
+        .a3,.a6,.a9,.a12,.a15{
+            animation: abcd 1s linear infinite;
+        } */
+        span>.a1 {
+            height: 100%;
+            width: 2%;
+            background-color: white;
+        }
+
+        span>.a2 {
+            height: 80%;
+            width: 2%;
+            background-color: white;
+        }
+
+        span>.a3 {
+            height: 60%;
+            width: 2%;
+            background-color: white;
+        }
+
+        span>.a4 {
+            height: 40%;
+            width: 2%;
+            background-color: white;
+        }
+
+        span>.a5 {
+            height: 20%;
+            width: 2%;
+            background-color: white;
+        }
+
+        span>.a6 {
+            height: 40%;
+            width: 2%;
+            background-color: white;
+        }
+
+        span>.a7 {
+            height: 60%;
+            width: 2%;
+            background-color: white;
+        }
+
+        span>.a8 {
+            height: 80%;
+            width: 2%;
+            background-color: white;
+        }
+
+        span>.a9 {
+            height: 100%;
+            width: 2%;
+            background-color: white;
+        }
+
+        span>.a10 {
+            height: 80%;
+            width: 2%;
+            background-color: white;
+        }
+
+        span>.a11 {
+            height: 60%;
+            width: 2%;
+            background-color: white;
+
+
+        }
+
+        span>.a12 {
+            height: 40%;
+            width: 2%;
+            background-color: white;
+
+
+        }
+
+        span>.a13 {
+            height: 20%;
+            width: 2%;
+            background-color: white;
+
+
+        }
+
+        span>.a14 {
+            height: 40%;
+            width: 2%;
+            background-color: white;
+
+
+        }
+
+        span>.a15 {
+            height: 60%;
+            width: 2%;
+            background-color: white;
+
+        }
+
+        .timing {
+            height: 7%;
+            width: 29.9%;
+            top: 57%;
+            position: absolute;
+            background-color: rgb(92, 99, 96);
+            user-select: none;
+        }
+
+        .time {
+            height: 50%;
+            width: 100%;
+            font-size: 1rem;
+            align-items: center;
+            justify-content: space-around;
+            display: flex;
+            /* border: 1px solid yellow; */
+            flex-direction: column;
+        }
+
+        .time>span {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            /* border: 1px solid blue; */
+            width: 100%;
+            height: 25%;
+            left: 0%;
+        }
+
+        #srt {
+            justify-content: left;
+        }
+
+        #end {
+            justify-content: right;
+        }
+
+        input {
+            height: 10%;
+            width: 100%;
+            user-select: none;
+            /* background-color: black; */
+        }
+
+        .a {
+            height: 30%;
+            width: 100%;
+            background-color: rgb(92, 99, 96);
+            align-items: center;
+            justify-content: space-around;
+            display: flex;
+            font-size: 1.3rem;
+        }
+
+        h3{
+            height: 7%;
+            width: 30%;
+            top: 44%;
+            font-size: 1.3rem;
+            left: 35%;
+            position: absolute;
+            color: white;
+            /* border: 1px solid white; */
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="aaa">
+        <span class="line">
+            <div class="a1" id="p1"></div>
+            <div class="a2" id="p2"></div>
+            <div class="a3" id="p3"></div>
+            <div class="a4" id="p4"></div>
+            <div class="a5" id="p5"></div>
+            <div class="a6" id="p6"></div>
+            <div class="a7" id="p7"></div>
+            <div class="a8" id="p8"></div>
+            <div class="a9" id="p9"></div>
+            <div class="a10" id="p10"></div>
+            <div class="a11" id="p11"></div>
+            <div class="a12" id="p12"></div>
+            <div class="a13" id="p13"></div>
+            <div class="a14" id="p14"></div>
+            <div class="a15" id="p15"></div>
+        </span>
+        <audio src="C:\Users\Admin\Videos\First Kiss Yo Yo Honey Singh Ft Ipsitaa - HDYaar.Com.mp4" alt="audio"
+        id="pp"></audio>
+        <div class="a">
+            <i class="fa fa-random" onclick="ran()"></i>
+            <i class="fa fa-backward" onclick="previous()"></i>
+            <i class="fa fa-play" onclick="ply()" id="play"></i>
+            <i class="fa fa-forward" onclick="next()"></i>
+            <i class="fa fa-retweet" onclick="re()"></i>
+        </div>
+        
+        <h3 id="h3">first kiss song</h3>
+
+        <div class="timing">
+            <div class="time">
+                <span id="srt">00:00s</span>
+                <span id="end">00:00s</span>
+            </div>
+            <input type="range" value="0" id="rng" onchange="chng(this.value)">
+        </div>
+    </div>
+
+    </div>
+    <script>
+        var n = 0;
+        var b = document.getElementById('play')
+        function ply() {
+
+            if (n == 0) {
+                pp.play();
+                b.classList.remove('fa-play');
+                b.classList.add('fa-pause');
+                n = 1;
+                document.getElementById('p1').style.animation = 'ab 1s linear infinite';
+                document.getElementById('p2').style.animation = 'abc 1s linear infinite';
+                document.getElementById('p3').style.animation = 'abcd 1s linear infinite';
+                document.getElementById('p4').style.animation = 'ab 1s linear infinite';
+                document.getElementById('p5').style.animation = 'abc 1s linear infinite';
+                document.getElementById('p6').style.animation = 'abcd 1s linear infinite';
+                document.getElementById('p7').style.animation = 'ab 1s linear infinite';
+                document.getElementById('p8').style.animation = 'abc 1s linear infinite';
+                document.getElementById('p9').style.animation = 'abcd 1s linear infinite';
+                document.getElementById('p10').style.animation = 'ab 1s linear infinite';
+                document.getElementById('p11').style.animation = 'abc 1s linear infinite';
+                document.getElementById('p12').style.animation = 'abcd 1s linear infinite';
+                document.getElementById('p13').style.animation = 'ab 1s linear infinite';
+                document.getElementById('p14').style.animation = 'abc 1s linear infinite';
+                document.getElementById('p15').style.animation = 'abcd 1s linear infinite';
+            }
+            else {
+                pp.pause();
+                b.classList.remove('fa-pause');
+                b.classList.add('fa-play');
+                n = 0;
+                document.getElementById('p1').style.animation = 'pause';
+                document.getElementById('p2').style.animation = 'pause';
+                document.getElementById('p3').style.animation = 'pause';
+                document.getElementById('p4').style.animation = 'pause';
+                document.getElementById('p5').style.animation = 'pause';
+                document.getElementById('p6').style.animation = 'pause';
+                document.getElementById('p7').style.animation = 'pause';
+                document.getElementById('p8').style.animation = 'pause';
+                document.getElementById('p9').style.animation = 'pause';
+                document.getElementById('p10').style.animation = 'pause';
+                document.getElementById('p11').style.animation = 'pause';
+                document.getElementById('p12').style.animation = 'pause';
+                document.getElementById('p13').style.animation = 'pause';
+                document.getElementById('p14').style.animation = 'pause';
+                document.getElementById('p15').style.animation = 'pause';
+            }
+        }
+        var z = 0;
+        function ran() {
+            document.getElementById('pp').random();
+        }
+        function re() {
+            document.getElementById('pp').retweet();
+        }
+        console.log(re)
+
+
+        var a = document.getElementById('pp');
+        var num = 0;
+        var arr = ["C:/Users/Admin/Downloads/Beete Hue Pal(PagalWorld.com.pe).mp3",
+            "C:/Users/Admin/Downloads/_Heeriye(PagalWorld.com.pe).mp3",
+            "C:/Users/Admin/Downloads/_Ram Siya Ram(PagalWorld.com.pe).mp3",
+            "C:/Users/Admin/Downloads/Raatan Lambiyan(PagalWorld.com.pe).mp3",
+            "C:/Users/Admin/Downloads/Tere Hawaale(PagalWorld.com.pe).mp3",
+            "C:/Users/Admin/Downloads/Tu Hai To Mujhe Phir Aur Kya Chahiye(PagalWorld.com.pe).mp3"]
+
+        var ar = ["Beete Hue Pal","Heeriye","Ram Siya Ram","Raatan Lambiyan","Tere Hawaale","Tu Hai To Mujhe Phir Aur Kya Chahiye"]
+
+        function next() {
+            if (num < 6) {
+                num++;
+                if (num > 5) {
+                    num = 0;
+                }
+                a.src = arr[num];
+                h3.innerHTML = ar[num];
+                pp.play();
+                console.log(num);
+                b.classList.remove('fa-play');
+                b.classList.add('fa-pause');
+            }
+        }
+        function previous() {
+            if (num >= 0) {
+                if (num <= 0) {
+                    num = 6
+                }
+                num--;
+                a.src = arr[num];
+                h3.innerHTML = ar[num];
+
+                pp.play();
+                console.log(num)
+                b.classList.remove('fa-play');
+                b.classList.add('fa-pause');
+            }
+
+        }
+
+        pp.ontimeupdate = function () {
+            var cmin = parseInt(pp.currentTime / 60);
+            var csec = parseInt(pp.currentTime % 60);
+            srt.innerText = (csec < 10) ? '0' + cmin + ':0' + csec + 's' : '0' + cmin + ':' + csec + 's';
+
+            rng.max = pp.duration;
+            rng.value = parseInt(pp.currentTime % rng.max);
+
+            if (pp.currentTime == pp.duration) {
+                next();
+            }
+
+            var min = parseInt(pp.duration / 60);
+            var sec = parseInt(pp.duration % 60);
+            end.innerText = (sec < 10) ? '0' + min + ':0' + sec + 's' : '0' + min + ':' + sec + 's';
+        }
+        function chng(atpoint) {
+            pp.currentTime = atpoint;
+        }
+    </script>
+</body>
+</html>
