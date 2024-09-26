@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>go</title>
+    <style>
+       *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+       }
+       body{
+        height: 100vh;
+        flex-direction: column;
+        background-size: 100% 100%;
+        user-select: none;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGehdrZYxwcADjjKrhkB6gdeSWa6nIUHCnmQ&usqp=CAU');
+       }
+       .main{
+            height: 100%;
+            width: 30%;
+            display: flex;
+            justify-content: flex-start;
+            background-color: whitesmoke;
+            box-shadow: 0px 0px 10px grey;
+       }
+       .name{
+        height: 8%;
+        width: 100%;
+        background-color: wheat;
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+        text-indent: 30px;
+        
+       }
+       .msg{
+        height: 10%;
+        width: 30%;
+        top: 8%;
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+        position: absolute;
+        background-color: grey;
+        color: white;
+        font-size: 1.2rem;
+        text-indent: 30px;
+        border: none;
+
+       }
+       .inbox{
+        height: 10%;
+        width: 30%;
+        top: 18%;
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+        position: absolute;
+        background-color: orangered;
+        color: white;
+        border: none;
+        font-size: 1.2rem;
+        text-indent: 30px;
+       }
+       .inbox:hover{
+        background-color: white;
+        color: black;
+       }
+       .jan,.bor,.jon{
+        left: 0;
+        position: absolute;
+        box-shadow: 0px 0px 1px grey;
+       }
+       .img2,.img,.img3{
+        height: 40%;
+        width: 80%;
+        left: 10%;
+        align-items: flex-start;
+        display: flex;
+        text-indent: 5px;
+        position: absolute;
+       }
+       .p2,.p1,.p3{
+        height: 50%;
+        width: 80%;
+        align-items: flex-start;
+        display: flex;
+        font-weight: bold;
+        color: rgb(41, 39, 39);
+        top: 45%;
+        left: 10%;
+        position: absolute;
+       }
+       h3>.two,h4>.one,h3>.three{
+        top: 20%;
+        color: rgb(90, 82, 82);
+       }
+       .bor{
+        height: 22%;
+        width: 30%;
+        top: 28%;
+       }
+       h3{
+        color: rgb(109, 106, 106);
+     }
+       .jan{
+        height: 20%;
+        width: 30%;
+        top: 50%;
+       }
+       .jon{
+        height: 13%;
+        width: 30%;
+        top: 70%;
+       }
+       .p3{
+        top: 70%;
+        position: absolute;
+       }
+       #new{
+        height: 15%;
+        width: 30%;
+        top: 83%;
+        position: absolute;
+        left: 0%;
+        display: block;
+        box-shadow: 0px 0px 2px grey;
+       }
+       .count>.one,.two,.three{
+         text-indent: 15px;
+       }
+       .main2{
+        height: 80%;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border: 2px solid black;
+        z-index: 1;
+        background-color: white;
+        top: 10%;
+        left: 30%;
+        position: absolute;
+        visibility: hidden;
+        display: block;
+        font-size: 1.3rem;
+       }
+       .mail{
+        height: 15%;
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        align-items: center;
+        text-indent: 30px;
+        display: flex;
+        background-color: orangered;
+       }
+       #to,#from,#sub{
+        height: 15%;
+        width: 100%;
+        font-size: 1.3rem;
+        text-indent: 10px;
+       }
+       #mind{
+        height: 20%;
+        width: 100%;
+        text-indent: 10px;
+        color: black;
+        font-size: 1.3rem;
+
+       }
+       .cancl{
+        height: 15%;
+        width: 20%;
+        font-size: 1rem;
+        color: white;
+        background-color: orangered;
+        justify-content: left;
+        position: absolute;
+
+       }
+       .send{
+        height: 15%;
+        width: 20%;
+        font-size: 1rem;
+        left: 80%;
+        position: absolute;
+        
+       }
+       .main3{
+        height: 60%;
+        width: 90%;
+        left: 5%;
+        top: 18%;
+        position: absolute;
+       }
+       .mail>.fa-times{
+       position: absolute;
+       left: 90%;
+       background-color: orangered;
+       border: none;
+       color: aliceblue;
+       }
+       .fa-times{
+       position: absolute;
+       left: 80%;
+       }
+       .send>.fa-send{
+       position: absolute;
+       left: 80%;
+       }
+       .foot{
+        height: 21%;
+        width: 30%;
+        top: 28%;
+        position: absolute;
+        visibility: hidden;
+        background-color: white;
+       }
+       .one1,.two2,.three3{
+        font-size: 1rem;
+        text-indent: 15%;
+       }
+       .fa-send,.fa-trash{
+        position: absolute;
+        left: 5%;
+       }
+       .fa-home{
+        position: absolute;
+        left: 5%;
+       }
+       .one,.two,.three{
+        font-size: 1rem;
+        text-indent: 15%;
+       }
+       #new>.one{
+        text-indent: 15%;
+       }
+       form:focus-within{
+        background-color: greenyellow;
+        color: orangered;
+       }
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="name"><strong><h1 style="color: rgb(90, 90, 197);">Asha_pal.Com</h1></strong></div>
+        <button class="msg" onclick="msg()" id="but">New Message<h1 class="fa fa-pencil"></h1></button>
+        <button class="inbox" onclick="inbox()" id="but2"><h1 class="fa fa-inbox"></h1>Inbox (3)<h1 class="fa fa-caret-down"></h1></button>
+         <div class="bor">
+            <div class="img">
+            <img src="https://images.freeimages.com/fic/images/icons/2463/glossy/512/user_male.png" alt="img" height="55px" width="55px">
+            <h3 class="one"><center><br>Borge Refsnes</center></h3>
+        </div>
+         <p class="p1">subjact : Remember Me<br><br>
+            Hello, i just Wanted to let you know<br>
+            that I'll be home at...
+        </p>
+        </div>
+        <div class="jan">
+            <div class="img2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRf5SMOmms2QdtWPaI-0Qy0uUPY35B76MKAQ&usqp=CAU" alt="img" height="50px" width="50px">
+            <h3 class="two"><center><br>Jane Doe</center></h3>
+        </div>
+         <p class="p2">
+           lorem input dolar simit amet<br>
+            Consectetur adipiscing elit.....
+        </p>
+         </div>
+         <div class="jon">
+            <div class="img3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE9ML0QbGwOiQvUlDh1_E4PSKmHPyTRxjuaQ&usqp=CAU" alt="img" height="50px" width="50px">
+            <h3 class="three"><center><br>John Doe</center></h3>
+        </div><br><br>
+         <p class="p3">welcom!</p>
+         </div>
+         <div class="count" id="new">
+            <div class="one"><h1 class="fa fa-send"></h1>Send</div><br>
+            <div class="two"><h1 class="fa fa-home"></h1>home</div><br>
+            <div class="three"><h1 class="fa fa-trash"></h1>Trash</div><br>
+          </div>
+            <form class="main2" id="box">
+                <div class="mail">Send Mail<button class="fa fa-times" onclick="close()"></button></div><br>
+                <div class="main3">
+                <label for="to">To</label><br>
+                <input type="text" id="to" title="type sender name"><br><br>
+                <label for="from"  title="type sender name">From</label>
+                <input type="text" id="from" title="type receiver name"><br><br>
+                <label for="sub">Subject</label>
+                <input type="text" id="sub" title="type your sub"><br><br>
+                <input type="text" id="mind"  placeholder="whts's in your mind"  title="type your msg"><br><br>
+                <button class="cancl"onclick="close()">Cancel<h1 class="fa fa-times"></h1></button>
+                <button class="send">Send<h1 class=" fa fa-send"></h1></button>
+               </div>
+            </form>
+
+            <div class="foot" id="box2">
+                <div class="one1"><h1 class="fa fa-send"></h1>Send</div><br>
+                <div class="two2"><h1 class="fa fa-home"></h1>home</div><br>
+                <div class="three3"> <h1 class=" fa fa-trash"></h1>Trash</div><br>
+            </div>
+
+        <script>
+            function msg() {
+                document.getElementById('box').style.visibility="visible";
+                document.getElementById('but').style.backgroundColor="darkgrey";
+            }
+            function close() {
+                document.getElementById('box').style.visibility="hidden";
+            }
+
+            function inbox(){
+               if ( document.getElementById('box2').style.visibility=="hidden") {
+                document.getElementById('box2').style.visibility="visible";
+                
+               } else {
+                document.getElementById('box2').style.visibility="hidden";
+         }
+           }
+        </script>
+    </body>
+    </html>
