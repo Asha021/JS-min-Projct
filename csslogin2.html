@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>go</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			background: linear-gradient(orange,white,green);
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: column;
+		}
+		.h_a{
+			height: 35%;
+			width: 100%;
+			/*border: 1px solid black;*/
+			align-items: center;
+			justify-content: center;
+			display: flex;
+			font-size: 5rem;
+		}
+		form{
+			height: 80%;
+			width: 40%;
+		}
+		fieldset{
+			height: 100%;
+			width: 100%;
+			align-items: center;
+			justify-content: space-around;
+			display: flex;
+			flex-direction: column;
+		}
+		legend{
+           font-size: 3.5rem;
+           color: dodgerblue;
+		}
+		.h_b{
+			height: 30%;
+			width: 90%;
+			font-size: 2rem;
+			/*border: 1px solid green;*/
+
+		}
+		.h_b > input{
+			height: 70%;
+			width: 100%;
+			background: transparent;
+			border: none;
+			outline: none;
+			border-bottom: 2px solid dodgerblue;
+			font-size: 1rem;
+			text-indent: 20px;
+		}
+		.h_b > input:hover{
+			height: 70%;
+			width: 100%;
+			border-radius: 50px;
+			box-shadow: 0px 5px 15px rgba(30, 144, 255, .5);
+			border: none;
+		}
+		.h_c{
+			height: 33%;
+			width: 90%;
+			/*border: 1px solid black;*/
+			font-size: 2rem;
+		}
+		.h_c > textarea{
+		    height: 70%;
+			width: 100%;
+			background: transparent;
+			border: none;
+			outline: none;
+			border-bottom: 2px solid dodgerblue;
+			font-size: 1rem;
+		}
+        .h_c > textarea:hover{
+			height: 70%;
+			width: 100%;
+			border-radius: 50px;
+			box-shadow: 0px 5px 15px rgba(30, 144, 255, .5);
+			border: none;
+			font-size: 1rem;
+			text-indent: 20px;
+		}
+        .h_d{
+			height: 33%;
+			width: 90%;
+			/*border: 1px solid black;*/
+			font-size: 2rem;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+		}
+		.h_d > input{
+			height: 70%;
+			width: 100%;
+			background: dodgerblue;
+			border: none;
+			outline: none;
+			border-bottom: 2px solid dodgerblue;
+			font-size: 1rem;
+			text-indent: 20px;
+			border-radius: 50px;
+			color: white;
+			font-size: 2rem;
+			cursor: pointer;
+			animation: abc 1s linear infinite;
+		}
+		@keyframes abc{
+			form{
+				background-color: burlywood;
+			}
+			to{
+				background-color: purple;
+			}
+		}
+	</style>
+</head>
+<body>
+     <div class="h_a">W<sup>3</sup>edu</div>
+     <form>
+     	<fieldset>
+     		<legend>Post Msg Form</legend>
+            <div class="h_b">
+               <label for="p">subjact</label>
+                <input type="text" id="p" placeholder="Enter Your subjact">
+             </div>   
+             <div class="h_c">
+               <label for="p">Message</label>
+                <!-- <input type="text" id="p" placeholder="Enter Your Msg"> -->
+                <textarea placeholder="Enter Your Message"></textarea>
+             </div>    
+             <div class="h_d">
+             	<input type="button" value="submit">
+             </div>
+     	</fieldset>
+     </form>
+</body>
+</html>
